@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "translucent-lava",
+	"version": "${version}",
+	"name": "translucent lava",
+	"description": "makes lava look like water. usage: /lava",
+	"authors": [
+		"schrumbo"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/project/translucent-lava",
+		"sources": "https://github.com/schrumbo/translucent-lava"
+	},
+	"license": "AGPL-3.0",
+	"icon": "assets/translucent-lava/water.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"schrumbo.translucentlava.TranslucentLava"
+		],
+		"client": [
+			"schrumbo.translucentlava.TranslucentLavaClient"
+		]
+	},
+	"mixins": [
+		"translucent-lava.mixins.json",
+		{
+			"config": "translucent-lava.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
