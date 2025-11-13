@@ -15,6 +15,6 @@ public class TranslucentLavaClient implements ClientModInitializer {
 		config = ConfigManager.load();
 		Commands.register();
 		TransLava.init();
-		TransLava.update(config.getEnabled());
+		TransLava.update(TranslucentLavaClient.config.getEnabled());
 	}
 }
